@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>猫咪环球旅行</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.bootcdn.net/ajax/libs/leaflet/1.9.4/leaflet.css"
+  />
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<!-- 顶部标题 -->
+<div class="top-ui">
+
+  <h1>🐱 黄婷婷像素宇宙</h1>
+
+
+</div>
+
+<!-- 答题框 -->
+<div class="quiz-panel">
+
+  <div class="quiz-title">
+   问答
+  </div>
+
+  <div id="question"></div>
+
+  <div id="answers"></div>
+
+</div>
+
+<!-- 图鉴 -->
+<div class="collection-panel">
+
+  <h2>📖 像素图鉴</h2>
+
+  <div id="collection"></div>
+
+</div>
+
+<!-- 奖励弹窗 -->
+<div class="reward-modal hidden" id="rewardModal">
+
+  <div class="reward-card">
+
+    <div class="reward-big">🎉</div>
+
+    <h2 id="rewardCity"></h2>
+
+    <div class="pixel-box">
+
+      <div id="pixelReward"></div>
+
+    </div>
+
+    <p id="rewardText"></p>
+
+    <div class="stars">⭐⭐⭐</div>
+
+    <button onclick="closeReward()">
+      收下奖励
+    </button>
+
+  </div>
+
+</div>
+<!-- 婷学小考弹窗 -->
+<div class="exam-modal hidden" id="examModal">
+
+  <div class="exam-card">
+
+    <h1>📝 婷学小考</h1>
+
+    <p class="exam-desc">
+      恭喜完成环球旅行！
+    </p>
+
+    <button onclick="startExam()">
+      开始考试
+    </button>
+
+  </div>
+
+</div>
+<div class="ting-exam hidden" id="tingExam">
+
+    <div class="ting-exam-card">
+
+        <h1>📝 婷学小考</h1>
+
+        <div id="tingQuestion"></div>
+
+        <div id="tingAnswers"></div>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
